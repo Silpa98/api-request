@@ -46,7 +46,7 @@ class Post extends Component {
         return (
             <div>
                 <b>
-                TO POST DATA
+                {/* TO POST DATA */}
                 </b>
                
                  <form   onSubmit={this.submitHandler} >
