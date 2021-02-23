@@ -35,7 +35,9 @@ function App() {
   </div> */}
       
   
-     <Got/>
+  {/* <Got/> */}
+
+  <Post/>
      
     </div>
   )

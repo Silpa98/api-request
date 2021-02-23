@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Buttons.css';
-
+import axios from 'axios';
 
 class Post extends Component {
     constructor(props) {
@@ -45,6 +45,23 @@ class Post extends Component {
              response.json())
          .then(json =>
              console.log(json));
+
+            //  axios.get('http://95.111.193.87/PerpApi/public/api/v1/units?limit=100&offset=0&order=desc&sort=name&token=12345678' ,
+            //  {headers:{token:12345678}}
+            //  )
+            //  .then(res=>{
+                 
+              
+            //      this.setState({posts:res.data.items})
+            //      console.log(this.state.posts)
+                 
+                 
+            //  })
+            //  .catch(err=>{
+                 
+            //      this.setState({errormsg:'error retriving data'})
+            //  })
+            
     }
     
     render() {
