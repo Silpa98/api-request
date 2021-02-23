@@ -8,6 +8,7 @@ class Post extends Component {
     
         this.state = {
              id:''
+             
         }
     }
     
@@ -36,6 +37,8 @@ class Post extends Component {
             response.json())
         .then(json =>
             console.log(json));
+
+    
     }
     
     render() {
@@ -44,21 +47,18 @@ class Post extends Component {
             
             <div>
                 <b>
-                TO DELETE DATA
+                DELETE DATA
                 </b>
               
                  <form   onSubmit={this.submitHandler} >
                     <div>
-                        <label className='cl'>
-                            Enter ID
-                        </label>
-                        <br>
-                        </br>
+                       
                         <input 
                         className='tx'
                         type='text'
                         name='id'
                         value={id} 
+                        placeholder='ID'
                         onChange={this.changeHandler}/>
                         
 

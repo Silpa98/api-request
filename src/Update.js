@@ -52,37 +52,32 @@ class Post extends Component {
         return (
             <div>
                 <b>
-                TO UPDATE DATA
+                 UPDATE DATA
 
                 </b>
               
                  <form   onSubmit={this.submitHandler} >
                     <div>
-                        <label className='cl'>
-                           Enter Name
-                            </label>
-                            <br>
-                            </br>
-                        <input 
-                       className='tx'
-                        type='text'
-                        name='name'
-                        value={name} 
-                        onChange={this.changeHandler}/>
-                        <br></br>
-                        <label className='cl'>
-                            Enter ID
-                        </label>
-                        <br>
-                        </br>
-                         <input 
+                        
+                    <input 
                          className='tx'
                        
                        type='text'
                        name='id'
                        value={id} 
+                       placeholder='ID'
                        onChange={this.changeHandler}/>
 
+                        <input 
+                       className='tx'
+                        type='text'
+                        name='name'
+                        value={name} 
+                        placeholder='Name'
+                        onChange={this.changeHandler}/>
+                       
+                        
+                        
                         <button type='submit' className='on'>
                             Submit
                         </button>

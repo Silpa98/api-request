@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Buttons.css';
 
 
+
 class Post extends Component {
     constructor(props) {
         super(props)
@@ -20,13 +21,15 @@ class Post extends Component {
 
     submitHandler =(e)=>{
         e.preventDefault()
+      
         console.log(this.state)
         const val = Object.values(this.state)
         const key = Object.keys(this.state)
-        console.log(val[0])
-        console.log(key[0])
+        // console.log(val[0])
+        // console.log(key[0])
         const h= key[0] + '=' +val[0]
-        console.log(h)
+        // console.log(h)
+       
 
         fetch('http://95.111.193.87/PerpApi/public/api/v1/units' ,
        { method:'POST',
@@ -39,6 +42,8 @@ class Post extends Component {
             response.json())
         .then(json =>
             console.log(json));
+
+           
     }
     
     render() {
@@ -46,20 +51,20 @@ class Post extends Component {
         return (
             <div>
                 <b>
-                {/* TO POST DATA */}
+                 POST DATA
                 </b>
                
                  <form   onSubmit={this.submitHandler} >
                     <div>
-                        <label className='cl'>Enter Data </label>
-                        <br>
-                        </br>
+                        
+                        
 
                         <input 
                         className='tx'
                         type='text'
                         name='name'
                         value={name} 
+                        placeholder='Name'
                         onChange={this.changeHandler}/>
                         
                         <button type='submit' className='on'>
